@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=UnifrakturMaguntia&family=Sofia+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --font-cinzel:  'Cinzel', serif;
+  --font-fraktur: 'UnifrakturMaguntia', cursive;
+  --font-sofia:   'Sofia Sans', sans-serif;
+
+  --black:    #0A0A0A;
+  --carbon:   #2B2B2B;
+  --mid:      #6E6E6E;
+  --light:    #CFCFCF;
+  --offwhite: #F5F5F5;
+  --silver:   #C0C0C0;
+  --chrome1:  #8A8A8A;
+  --chrome2:  #EFEFEF;
+  --white:    #ffffff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sofia);
+  background: var(--offwhite);
+  color: var(--black);
+  overflow-x: hidden;
+  font-size: 0.9375rem;
+}
+
+/* Splash chrome text */
+.splash-wordmark {
+  font-family: var(--font-fraktur);
+  font-size: clamp(72px, 15vw, 120px);
+  background: linear-gradient(180deg, #C0C0C0 0%, #8A8A8A 40%, #2B2B2B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+  line-height: 0.9;
+  margin-bottom: 0.5rem;
+}
+.splash-R {
+  font-family: var(--font-fraktur);
+  font-size: clamp(48px, 10vw, 80px);
+  background: linear-gradient(180deg, #C0C0C0 0%, #8A8A8A 40%, #2B2B2B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+  line-height: 1;
+}
+
+/* Nav logo */
+.nav-logo {
+  font-family: var(--font-fraktur);
+  font-size: 1.625rem;
+  color: var(--black);
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+
+/* Auth big R */
+.auth-big-r {
+  font-family: var(--font-fraktur);
+  background: linear-gradient(180deg, #fff 0%, #8A8A8A 50%, #2B2B2B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  display: block;
+}
+
+/* Hero noise overlay */
+.hero-noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+/* Spinner */
+@keyframes spin { to { transform: rotate(360deg); } }
+.spinner {
+  width: 40px; height: 40px;
+  border: 2px solid var(--light);
+  border-top-color: var(--black);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--black);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-cinzel);
+  font-size: 0.625rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: transform 0.3s;
+  z-index: 999;
+  white-space: nowrap;
+  max-width: calc(100vw - 2rem);
+  text-align: center;
+}
+.toast.show { transform: translateX(-50%) translateY(0); }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--offwhite); }
+::-webkit-scrollbar-thumb { background: var(--light); }
+::-webkit-scrollbar-thumb:hover { background: var(--mid); }
