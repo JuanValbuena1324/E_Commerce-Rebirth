@@ -1,13 +1,32 @@
+# Rebirth — Designer Streetwear E-Commerce & AI Virtual Try-On
+
+![Next.js](https://img.shields.io/badge/Next.js-14-000000?style=flat&logo=nextdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=flat&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-Brand_Tokens-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
+![Zustand](https://img.shields.io/badge/State-Zustand-443E38?style=flat)
+![React Query](https://img.shields.io/badge/Data-TanStack_Query-FF4154?style=flat&logo=reactquery&logoColor=white)
+![AI Try-On](https://img.shields.io/badge/Feature-AI_Virtual_Try--On-10B981?style=flat)
+
+## Description
+
+**Rebirth** redefines the streetwear e-commerce experience by integrating artificial intelligence and user-identity-centered design. Built as a full-stack **Next.js 14** application, it features a dynamic catalog with multi-column grid views, persistent shopping cart management, RESTful API endpoints, and an **AI Virtual Try-On** module that lets users preview garments before purchasing.
+
+## Author
+
+| Contributor | Role / Focus |
+| :--- | :--- |
+| Juan Pablo Valbuena | `Full-Stack Architecture, UI/UX Design Tokens & AI Virtual Try-On` |
+
+## Tech Stack & Architecture
+
+* **Next.js 14 (App Router & TypeScript):** Server-side rendering, dynamic routing, and integrated backend API routes.
+* **Tailwind CSS:** Custom design system configured with Rebirth brand tokens and Google Fonts (`Cinzel`, `UnifrakturMaguntia`, and `Sofia Sans`).
+* **Zustand:** Lightweight client-side state management with `localStorage` persistence for the shopping cart and UI view modes.
+* **TanStack React Query:** Asynchronous server state caching and synchronization.
+* **AI Virtual Try-On (`/try-on`):** Interactive garment fitting workflow (`upload → simulate → result`).****
 # Rebirth — Designer Clothing E-Commerce
 
 Full-stack Next.js 14 app converted from a single HTML prototype.
-
-## Stack
-- **Next.js 14** (App Router, TypeScript)
-- **Tailwind CSS** with Rebirth brand tokens
-- **Zustand** — client cart + UI state (localStorage persistent)
-- **TanStack React Query** — server state caching
-- **Next.js API Routes** — backend endpoints
 
 ## Project Structure
 ```
